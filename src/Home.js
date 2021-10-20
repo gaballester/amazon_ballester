@@ -1,5 +1,10 @@
 import React from "react";
-function Home() { 
-  return <div className="home">Productos en oferta</div>;
+import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
+
+const Home = () => {
+  return (
+    <ItemListContainer greeting="Bienvenido a nuestro Portal de Ventas"/>
+  )
+  
 }
 export default Home;

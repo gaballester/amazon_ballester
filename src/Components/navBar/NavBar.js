@@ -1,7 +1,8 @@
 import "./navBar.css";
 import SearchIcon from "@material-ui/icons/Search";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
+import CartWidget from "../CartWidget/CartWidget";
+
 
 const NavBar = () => {
     return (
@@ -36,15 +37,7 @@ const NavBar = () => {
                 <span className="navbar__optionLineTwo">& Orders</span>
               </div>
             </Link>
-            <Link to="/checkout">
-              <div className="navbar__optionBasket">
-                <span className="nav-cart-icon"></span>
-                <ShoppingBasketIcon/>
-                <span className="navbar__optionLineTwo navbar__basketCount">
-                  0
-                </span>
-              </div>
-            </Link>
+            <CartWidget/>
           </div>
         </div>
       );
