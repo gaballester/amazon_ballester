@@ -33,7 +33,7 @@ const ItemCount = (props) => {
         onClick={decrement}>
       </Button>
 
-      <TextField id="outlined-basic" label={count} variant="outlined" />
+      <TextField label={count} variant="outlined" disabled className="center" />
 
       <Button
         variant="text"
