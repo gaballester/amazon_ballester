@@ -23,9 +23,9 @@ const ItemCount = (props) => {
   }
 
   return (
+
     <div className="counter">
-      <Button
-        variant="text"
+      <Button 
         variant="contained"
         size="small"
         disableElevation
@@ -36,7 +36,6 @@ const ItemCount = (props) => {
       <TextField label={count} variant="outlined" disabled className="center" />
 
       <Button
-        variant="text"
         variant="contained"
         size="small"
         disableElevation

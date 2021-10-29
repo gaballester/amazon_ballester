@@ -9,6 +9,7 @@ const NavBar = () => {
         <div className="navbar">
           <Link to="/">
             <img
+              alt="Amazon Logo"
               className="navbar__logo"
               src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
             />
