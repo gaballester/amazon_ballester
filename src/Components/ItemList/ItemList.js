@@ -1,8 +1,6 @@
 import Item from "../Item/Item"
 
 const ItemList = ({param}) => {
-  // console.log("aqui recibio param")
-  // console.log(param)
   return (
     <>
         { param && param.length > 0  ? 
@@ -11,8 +9,7 @@ const ItemList = ({param}) => {
                <Item item={item} />
             </div>
          })       
-          : "Item List Loading..."}
-
+          : "Error reciving Item List parameters..."}
     </>
   )
 }

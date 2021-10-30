@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./Home";
+// import Home from "./Home";
 import NavBar from "./Components/NavBar/NavBar";
-import ItemList from "./Components/ItemList/ItemList";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
@@ -12,8 +12,7 @@ function App() {
         <Switch>
           <Route path="/">
             <NavBar />
-            <Home />
-            <ItemList/>
+            <ItemListContainer exact/>
           </Route>
         </Switch>
       </Router>

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import ItemList from '../ItemList/ItemList'
 import productos from "../../json/products.json"
 
-export const ItemListContainer = () => {
+const ItemListContainer = () => {
 
     const [items, setItems] = useState([]);
 
@@ -32,4 +32,4 @@ export const ItemListContainer = () => {
 
 }
 
-
+export default ItemListContainer;
