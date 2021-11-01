@@ -3,32 +3,43 @@ import React, { useEffect, useState } from "react";
 import ItemList from '../ItemList/ItemList'
 import productos from "../../json/products.json"
 
+
 const ItemListContainer = () => {
 
-    const [items, setItems] = useState([]);
+  // const { paramCategory } = useParams()
+  // console.log(paramCategory)
+  
 
-    useEffect(() => {
-        setTimeout(() => {
-            setItems(productos);
-        }, 2000);
-      },[]);   
+  const [items, setItems] = useState([]);
 
-      
+  useEffect(() => {
+    setTimeout(() => {
+      // if (paramCategory) {
+      //   const productos_filtrados = productos.filter(producto => producto.category == paramCategory)
+      //   console.log(productos_filtrados)
+      //   setItems(productos_filtrados)
+      // } else {
+        setItems(productos);
+      //}   
 
-      if (items.length === 0) {
-        return <p>Initial Loading ...</p>;
-      } else 
-      {
-        return (
-        <>
-            {/* <h1>{param.greeting}</h1>
+    }, 2000);
+  }, []);
+
+  
+
+  if (items.length === 0) {
+    return <p>Initial Loading ...</p>;
+  } else {
+    return (
+      <>
+        {/* <h1>{param.greeting}</h1>
                 <div>
                     <ItemCount qty={4} stk={10} />
                 </div> */}
-            <ItemList param={items} />
-        </>
-        )
-      }
+        <ItemList param={items} />
+      </>
+    )
+  }
 
 }
 

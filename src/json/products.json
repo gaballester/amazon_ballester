@@ -12,7 +12,8 @@
     "stock":10,
     "best":false,
     "new":false,
-    "starts":3
+    "starts":3,
+    "category":2
     },{
     "id":2,
     "branch":"Acer",
@@ -27,7 +28,8 @@
     "stock":5,
     "best":true,
     "new":true,
-    "starts":5
+    "starts":5,
+    "category":1
     },{   
     "id":3,
     "branch":"Asus",
@@ -42,7 +44,8 @@
     "stock":7,
     "best":true,
     "new":false,
-    "starts":5
+    "starts":5,
+    "category":1
     },{   
     "id":4,
     "branch":"Asus",
@@ -57,7 +60,8 @@
     "stock":19,
     "best":false,
     "new":false,
-    "starts":4  
+    "starts":4,
+    "category":2  
     },{
     "id":5,
     "branch":"Apple",
@@ -72,7 +76,8 @@
     "stock":10,
     "best":true,
     "new":true,
-    "starts":5                 
+    "starts":5,
+    "category":1                 
     },{
     "id":6,
     "branch":"Apple",
@@ -87,7 +92,8 @@
     "stock":10,
     "best":true,
     "new":false,
-    "starts":5                 
+    "starts":5,
+    "category":1                 
     },{
     "id":7,
     "branch":"MSI",
@@ -102,7 +108,8 @@
     "stock":5,
     "best":false,
     "new":false,
-    "starts":4                 
+    "starts":4,
+    "category":2                
     },{
     "id":8,
     "branch":"MSI",
@@ -117,5 +124,6 @@
     "stock":5,
     "best":true,
     "new":true,
-    "starts":5                 
+    "starts":5,
+    "category":1                 
     }]

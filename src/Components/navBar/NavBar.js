@@ -1,13 +1,14 @@
 import "./navBar.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { Link } from "react-router-dom";
-import CartWidget from "../CartWidget/CartWidget";
 
+import CartWidget from "../CartWidget/CartWidget";
+import Nav from "../Nav/Nav";
 
 const NavBar = () => {
     return (
         <div className="navbar">
-          <Link to="/">
+          <Link to="/" exact >
             <img
               alt="Amazon Logo"
               className="navbar__logo"
@@ -31,7 +32,9 @@ const NavBar = () => {
                 </span>
               </div>
             </Link>
-    
+
+            < Nav />
+
             <Link to='/orders'>
               <div className="navbar__option">
                 <span className="navbar__optionLineOne">Returns</span>
