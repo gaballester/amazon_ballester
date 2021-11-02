@@ -13,7 +13,7 @@
     "best":false,
     "new":false,
     "starts":3,
-    "category":2
+    "category":"Computers"
     },{
     "id":2,
     "branch":"Acer",
@@ -29,7 +29,7 @@
     "best":true,
     "new":true,
     "starts":5,
-    "category":1
+    "category":"Computers"
     },{   
     "id":3,
     "branch":"Asus",
@@ -45,7 +45,7 @@
     "best":true,
     "new":false,
     "starts":5,
-    "category":1
+    "category":"Computers"
     },{   
     "id":4,
     "branch":"Asus",
@@ -61,7 +61,7 @@
     "best":false,
     "new":false,
     "starts":4,
-    "category":2  
+    "category":"Computers" 
     },{
     "id":5,
     "branch":"Apple",
@@ -77,7 +77,7 @@
     "best":true,
     "new":true,
     "starts":5,
-    "category":1                 
+    "category":"Computers"               
     },{
     "id":6,
     "branch":"Apple",
@@ -93,7 +93,7 @@
     "best":true,
     "new":false,
     "starts":5,
-    "category":1                 
+    "category":"Computers"                 
     },{
     "id":7,
     "branch":"MSI",
@@ -109,7 +109,7 @@
     "best":false,
     "new":false,
     "starts":4,
-    "category":2                
+    "category":"Computers"              
     },{
     "id":8,
     "branch":"MSI",
@@ -125,5 +125,54 @@
     "best":true,
     "new":true,
     "starts":5,
-    "category":1                 
-    }]
+    "category":"Computers"                
+    },{
+    "id":1001,
+    "branch":"Samsung",
+    "title":"SAMSUNG LC24F396FHNXZA 23.5 FHD Curved LED-Lit FreeSync Monitor",
+    "description1":"1800R curvature of the screen provides a truly immersive viewing experience",
+    "description2":"A stylish design featuring a Black body metallic finish and sleek curves",
+    "description3":"4 (GTG) ms response time",
+    "description4":"Amd Free Sync minimizes input latency and dramatically reduces image tearing and stutter during gaming",
+    "description5":"Eye saver mode optimizes your viewing comfort by reducing blue light emissions and flickers at the touch of a button",
+    "price":180,
+    "pictureUrl":"/img/1001.jpg",
+    "stock":15,
+    "best":true,
+    "new":true,
+    "starts":5,
+    "category":"Monitors"                
+    },{
+    "id":1002,
+    "branch":"Asus",
+    "title":"ASUS VG278QR 27” Gaming Monitor 165Hz Full HD (1920 x 1080) 0.5ms G-SYNC Eye Care DisplayPort HDMI DVI",
+    "description1":"27 inch Full HD (1920x1080) display with 165Hz refresh rate (supports 144Hz) and 0.5ms (GTG) response time Perfect to gain the upper hand in FPS racer real-time strategy and sport titles and free Sync/Adaptive Sync for a tear-free experience",
+    "description2":"G-SYNC compatible technology supported through DisplayPort and HDMI ports provides variable refresh rates for low latency stuttering-free and tearing-free while gaming",
+    "description3":"Extreme low motion blur (ELMB) technology reduces ghosting and motion blur creating a fluid gaming experience",
+    "description4":"Marathon ready with ASUS Eye Care technology to minimize eye fatigue and an ergonomic stand with full height/tilt/swivel/pivot adjustments to accommodate any desk",
+    "description5":"Flexible connectivity options with DisplayPort 1.2 HDMI 1.4 Dual-link DVI-D",
+    "price":245,
+    "pictureUrl":"/img/1002.jpg",
+    "stock":10,
+    "best":true,
+    "new":true,
+    "starts":5,
+    "category":"Monitors"                
+    },{
+    "id":1003,
+    "branch":"Samsung",
+    "title":"SAMSUNG 49-inch Odyssey G9 Gaming Monitor | QHD, 240hz, 1000R Curved, QLED, NVIDIA G-SYNC & FreeSync | LC49G95TSSNXZA Model",
+    "description1":"SAMSUNG'S LARGEST 1000R GAMING MONITOR: Get your head in the game with the 49 inch Odyssey G9, which matches the curve of the human eye, for maximum immersion and minimal eye strain. With the screen space of two 27” panels, you can truly take command on the battlefield.",
+    "description2":"CUTTING EDGE QLED TECHNOLOGY: From deepest blacks to vivid colors, Samsung QLED ensures pixel perfect picture quality with every frame. Utilizing Quantum Dot technology, Samsung QLED creates more vivid colors with 125% more color space compared to sRGB, ensuring the highest class of color reproduction.",
+    "description3":"NVIDIA G-SYNC & FREESYNC: Dropping frames means dropping chances to put your enemy in the dirt. With NVIDIA G-SYNC and FreeSync Premium Pro support, Odyssey matches every frame from your graphics card, so you’re never caught short from moment to moment.",
+    "description4":"DUAL QHD DISPLAY: The gaming world of your imagination made real.The 49-inch DQHD resolution brings you a displayas wide as two QHD monitors sitting side by side,with incredibly detailed, pin-sharp images.Experience a more encompassing view withmaximum space to take in all the action.08",
+    "description5":"INFINITY CORE LIGHTING: Customize your Odyssey with distinct core colorcustomization, allowing you to match yourmonitor with the rest of your gaming setup. Operation Conditions-Temperature-10 to 40, Humidity-10 to 80,non-condensing, Storage Conditions Temperature-(-20) to 45",
+    "price":1697,
+    "pictureUrl":"/img/1003.jpg",
+    "stock":3,
+    "best":true,
+    "new":true,
+    "starts":5,
+    "category":"Monitors"                
+    }         
+]

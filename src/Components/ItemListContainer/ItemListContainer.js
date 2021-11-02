@@ -1,28 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from '../ItemList/ItemList'
 import productos from "../../json/products.json"
 
 
-const ItemListContainer = () => {
+const ItemListContainer = (param) => {
 
-  // const { paramCategory } = useParams()
-  // console.log(paramCategory)
+const { categoryId } = useParams()
+console.log(categoryId)
   
 
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     setTimeout(() => {
-      // if (paramCategory) {
-      //   const productos_filtrados = productos.filter(producto => producto.category == paramCategory)
-      //   console.log(productos_filtrados)
-      //   setItems(productos_filtrados)
-      // } else {
+      if (categoryId) {
+        const productos_filtrados = productos.filter(producto => producto.category == categoryId)
+        console.log(productos_filtrados)
+        setItems(productos_filtrados)
+      } else {
         setItems(productos);
-      //}   
+      }   
 
     }, 2000);
-  }, []);
+  }, [categoryId]);
 
   
 

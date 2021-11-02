@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom'
 const Nav = () => {
     return (
         <nav>
-            <NavLink to="/category/1">Category 1</NavLink>
-            <NavLink to="/category/2">Category 2</NavLink>
+            <NavLink to="/category/Computers">Computers</NavLink>
+            '||'
+            <NavLink to="/category/Monitors">Monitors</NavLink>
         </nav>
     )
 }
