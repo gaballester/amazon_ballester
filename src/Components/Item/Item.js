@@ -1,4 +1,5 @@
 import "./Item.css"
+// import ItemCount from "../ItemCount/ItemCount"
 import { Link } from 'react-router-dom'
 
 const Item = ({ item }) => {
@@ -23,9 +24,12 @@ const Item = ({ item }) => {
                         ))}
                 </div>
             </div>
+            {/* <div>
+                <ItemCount param={0} />
+            </div> */}
 
             <ul>
-                <li>
+            <li className="item__li">
                     <Link to={`/itemDetail/${item.id}`}>View Details</Link>
                 </li>
             </ul>

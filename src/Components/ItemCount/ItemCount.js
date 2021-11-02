@@ -24,7 +24,7 @@ const ItemCount = (props) => {
 
   return (
 
-    <div className="counter">
+    <div className="counter" >
       <Button 
         variant="contained"
         size="small"
@@ -33,7 +33,13 @@ const ItemCount = (props) => {
         onClick={decrement}>
       </Button>
 
-      <TextField label={count} variant="outlined" disabled className="center" />
+      <TextField 
+          label={count} 
+          size="small"
+          variant="outlined" 
+          disabled
+          align="center"
+          />
 
       <Button
         variant="contained"

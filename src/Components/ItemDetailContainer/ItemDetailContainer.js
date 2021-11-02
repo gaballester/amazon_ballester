@@ -22,6 +22,7 @@ const ItemDetailContainer = () => {
         return <p>Finding product ...</p>;
       } else 
       {
+
         return (
         <>
             <ItemDetail item={item} />

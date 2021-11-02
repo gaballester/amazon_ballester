@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import ItemCount from "../ItemCount/ItemCount"
 import ItemList from '../ItemList/ItemList'
 import productos from "../../json/products.json"
 
@@ -28,7 +27,7 @@ const ItemListContainer = () => {
   
 
   if (items.length === 0) {
-    return <p>Initial Loading ...</p>;
+    return <p>Loading all Products...</p>;
   } else {
     return (
       <>
