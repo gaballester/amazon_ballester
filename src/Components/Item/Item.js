@@ -1,5 +1,4 @@
 import "./Item.css"
-// import ItemCount from "../ItemCount/ItemCount"
 import { Link } from 'react-router-dom'
 
 const Item = ({ item }) => {
@@ -8,14 +7,15 @@ const Item = ({ item }) => {
 
         <div className="item" key={item.id} id={item.id}>
 
+            <h2>{item.title}</h2>
             <img src={item.pictureUrl} alt="" />
 
-            <div className="item__info" key={item.id}>
-                <p>{item.title}</p>
-                <p className="item__price">
-                    <small>$</small>
-                    <strong>{item.price}</strong>
-                </p>
+            <div className="item__info" >
+
+                <p>{item.description1}</p>
+                <p>{item.description2}</p>
+                <h3>Price: {item.price}</h3>
+
                 <div className="item__rating">
                     {Array(item.starts)
                         .fill()
@@ -23,17 +23,10 @@ const Item = ({ item }) => {
                             <p>🌟</p>
                         ))}
                 </div>
-            </div>
-            {/* <div>
-                <ItemCount param={0} />
-            </div> */}
-
-            <ul>
-            <li className="item__li">
+                <a >
                     <Link to={`/itemDetail/${item.id}`}>View Details</Link>
-                </li>
-            </ul>
-
+                </a>
+            </div>
         </div>
     )
 }

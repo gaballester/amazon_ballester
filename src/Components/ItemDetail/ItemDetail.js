@@ -1,7 +1,7 @@
-import "../Item/Item.css"
+import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import { Link } from 'react-router-dom';
-import { TextField, Button } from "@material-ui/core"
+import { Button } from "@material-ui/core"
 
 
 const ItemDetail = ({ item }) => {
@@ -11,50 +11,55 @@ const ItemDetail = ({ item }) => {
 
     return (
 
+        <div className="itemDetail" key={id} id={id}>
+            <div className="itemDetail__info" >
+                <h2>{branch} - {title}</h2>
+                <img className="itemDetail__img" src={pictureUrl} alt="" />
 
-        <div className="item" key={item[0].id} id={item.id}>
+                <div className="itemDetail__description">
 
-            <img src={pictureUrl} alt="" />
-
-            <div className="item__info" key={id}>
-                <h2>{title} ({id})</h2>
-                <div>
                     <ul>
-                        <li className="item__li">{description1}</li>
-                        <li className="item__li">{description2}</li>
-                        <li className="item__li">{description3}</li>
-                        <li className="item__li">{description4}</li>
-                        <li className="item__li">{description5}</li>
+                        <li key="1" className="itemDetail__li">{description1}</li>
+                        <li key="2" className="itemDetail__li">{description2}</li>
+                        <li key="3" className="itemDetail__li">{description3}</li>
+                        <li key="4" className="itemDetail__li">{description4}</li>
+                        <li key="5" className="itemDetail__li">{description5}</li>
                     </ul>
-                </div>
-                <div className="item__price">
-                    <p>
-                        <small>$</small><strong>{price}</strong>
-                    </p>
-                </div>
-                <div className="item__rating">
-                    {Array(starts)
-                        .fill()
-                        .map((_, i) => (
-                            <p>🌟</p>
-                        ))}
-                </div>
-                <div>
-                    <ItemCount qty={1} stk={10} />
-                    <Button
-                        variant="contained"
-                        size="small"
-                        disableElevation
+
+                    <h3 className="itemDetail__price">Price: {price}</h3>
+
+                    <div className="itemDetail__rating">
+                        {Array(starts)
+                            .fill()
+                            .map((_, i) => (
+                                <p>🌟</p>
+                            ))}
+                    </div>
+                    <div className="itemDetail__Count">
+                             <ItemCount qty={1} stk={10} />
+                    </div>
+               
+
+                    <div>
+                        <Button
+                            variant="contained"
+                            size="small"
+                            disableElevation
                         // onClick={ }
                         >
                             Add to Cart
-                    </Button>
+                        </Button>
+                    </div>
+
+
+                    <ul>
+                        <li className="itemDetail__li">
+                            <Link to={'/'}>Return Home</Link>
+                        </li>
+                    </ul>
+
                 </div>
-                <ul>
-                    <li className="item__li">
-                        <Link to={'/'}>Return Home</Link>
-                    </li>
-                </ul>
+
             </div>
         </div>
     )
