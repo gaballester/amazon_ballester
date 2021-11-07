@@ -5,7 +5,7 @@ const Item = ({ item }) => {
 
     return (
 
-        <div className="item" key={item.id} id={item.id}>
+        <div className="item" id={item.id}>
 
             <h2>{item.title}</h2>
             <img src={item.pictureUrl} alt="" />
@@ -20,12 +20,10 @@ const Item = ({ item }) => {
                     {Array(item.starts)
                         .fill()
                         .map((_, i) => (
-                            <p>🌟</p>
+                            <p key={i}>🌟</p>
                         ))}
                 </div>
-                <a >
-                    <Link to={`/itemDetail/${item.id}`}>View Details</Link>
-                </a>
+                <Link to={`/itemDetail/${item.id}`}>View Details</Link>
             </div>
         </div>
     )

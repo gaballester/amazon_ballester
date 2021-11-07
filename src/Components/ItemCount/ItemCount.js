@@ -4,15 +4,18 @@ import { Add, Remove } from "@material-ui/icons"
 import "./itemCount.css";
 
 
-const ItemCount = (props) => {
+const ItemCount = ({onAdd}) => {
+
+
   // Set the initial count state to Cart quantity
-  const [count, setCount] = useState(props.qty)
+  const [count, setCount] = useState(1)
+
 
   // Create handleIncrement event handler only exist stock
   const increment = () => {
-    if (count < props.stk) {
+    // if (count < param.stk) {
       setCount(count + 1)
-    }
+    //}
   }
 
   //Create handleDecrement event handler
@@ -24,6 +27,7 @@ const ItemCount = (props) => {
 
   return (
 
+    <>
     <div className="counter" >
       <Button 
         variant="contained"
@@ -50,8 +54,18 @@ const ItemCount = (props) => {
       </Button>
 
     </div>
+    <div>
+        <Button
+        variant="contained"
+        size="small"
+        disableElevation
+        onClick={() => onAdd(count)}>
+          Add to Cart
+      </Button>
+    </div>
+    </>
 
-  );
+  )
 }
 
 export default ItemCount

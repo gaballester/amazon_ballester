@@ -4,6 +4,7 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 
 
+
 const ItemDetailContainer = () => {
 
     const { id } = useParams();
@@ -16,7 +17,7 @@ const ItemDetailContainer = () => {
                 productos.filter(item => item.id === parseInt(id))
             )       
         }, 2000);
-      },[]);   
+      },[id]);   
 
       if (item.length === 0) {
         return <p>Finding product ...</p>;

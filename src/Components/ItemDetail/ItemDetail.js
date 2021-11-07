@@ -1,6 +1,6 @@
 import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom"
 import { Button } from "@material-ui/core"
 
 
@@ -8,6 +8,13 @@ const ItemDetail = ({ item }) => {
 
 
     const { id, branch, description1, description2, description3, description4, description5, title, pictureUrl, starts, price } = item[0];
+
+    const stateUplistindFromCount = (dataHijo) => {
+        console.log(dataHijo)
+
+
+    }
+
 
     return (
 
@@ -32,36 +39,38 @@ const ItemDetail = ({ item }) => {
                         {Array(starts)
                             .fill()
                             .map((_, i) => (
-                                <p>🌟</p>
+                                <p key={i}>🌟</p>
                             ))}
                     </div>
                     <div className="itemDetail__Count">
-                             <ItemCount qty={1} stk={10} />
-                    </div>
-               
-
-                    <div>
-                        <Button
-                            variant="contained"
-                            size="small"
-                            disableElevation
-                        // onClick={ }
-                        >
-                            Add to Cart
-                        </Button>
+                        <ItemCount onAdd={stateUplistindFromCount} />
+                        {/* qty={1} stk={10} */}
                     </div>
 
-
-                    <ul>
-                        <li className="itemDetail__li">
-                            <Link to={'/'}>Return Home</Link>
-                        </li>
-                    </ul>
-
+                    <div className="itemDetail__button">
+                        <Link to="/">
+                            <Button
+                                variant="contained"
+                                size="small"
+                                disableElevation
+                                onClick={() => { }}>
+                                Buy more
+                            </Button>
+                        </Link>
+                        <Link to="/cart">
+                            <Button
+                                variant="contained"
+                                size="small"
+                                disableElevation
+                                onClick={() => { }}>
+                                Go to Cart
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
-
             </div>
         </div>
+
     )
 }
 

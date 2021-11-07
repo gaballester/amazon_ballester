@@ -28,14 +28,22 @@
     object-fit: contain;
     margin: 15px;
   }
-  
-  .itemDetail > button {
+
+  .itemDetail__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-flex-start;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+  /* .itemDetail > button {
     background: #f0c14b;
     border: 1px solid;
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
-  }
+  } */
   
   .itemDetail__price {
     margin-top: 5px;
