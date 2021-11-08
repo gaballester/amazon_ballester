@@ -2,17 +2,18 @@ import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
 import { Button } from "@material-ui/core"
+import { useHistory } from "react-router-dom";
 
 
 const ItemDetail = ({ item }) => {
 
-
     const { id, branch, description1, description2, description3, description4, description5, title, pictureUrl, starts, price } = item[0];
+
+    const {push} = useHistory();
 
     const stateUplistindFromCount = (dataHijo) => {
         console.log(dataHijo)
-
-
+        push("/cart")
     }
 
 
