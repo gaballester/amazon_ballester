@@ -6,24 +6,29 @@ import NavBar from "./Components/NavBar/NavBar";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./Components/Cart/Cart";
+import CustomProvider from "../src/Context/CartContext";
 
 function App() {
   return (
     <div className="app">
-    <BrowserRouter>
-      <NavBar />
+      <BrowserRouter>
 
-      <Switch>
+        <CustomProvider>
 
-        <Route path="/" component={ItemListContainer} exact={true} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/itemDetail/:id" component={ItemDetailContainer} />
-        <Route path="/category/:categoryId" component={ItemListContainer} />
-        
-      </Switch>
+          <NavBar />
 
+          <Switch>
 
-    </BrowserRouter>
+            <Route path="/" component={ItemListContainer} exact={true} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/itemDetail/:id" component={ItemDetailContainer} />
+            <Route path="/category/:categoryId" component={ItemListContainer} />
+
+          </Switch>
+
+        </CustomProvider>
+
+      </BrowserRouter>
 
     </div>)
 

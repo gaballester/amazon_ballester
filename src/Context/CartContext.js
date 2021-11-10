@@ -1,0 +1,67 @@
+import { createContext,useState } from "react"
+
+export const contexto = createContext() 
+
+export const { Provider } = contexto
+
+const CustomProvider = ( {children}) => {
+
+    const [cart,setCart] = useState([])
+
+    const isInCart = (id) => {
+        return cart.find(item => item.id === id)
+    }
+
+    const addToCart = (id, branch, title, pictureUrl, qty, price) => {
+    
+        if (isInCart(id)) {
+            setCart(cart.map(item => {
+                if (item.id === id) {
+                    item.qty += qty
+                }
+                return item
+            }))
+        }
+        else {
+            setCart([...cart, {id, branch, title, pictureUrl, qty, price}])
+        }
+    }
+
+    const removeFromCart = (id) => {
+        if (isInCart(id)) {
+            setCart(cart.filter(item => item.id !== id))
+        }
+    }
+
+    const emtyCart = () => {
+        setCart([])
+    }
+
+    const totalUnits = () => {  
+        let totalUnitsQty = 0
+        cart.forEach(element => {
+            totalUnitsQty += element.qty          
+        }
+        )
+        return totalUnitsQty;
+    }
+
+
+    const contextValue = {
+        cart,
+        addToCart,
+        removeFromCart,
+        emtyCart,
+        totalUnits
+    }
+    return (
+
+        <div>
+            <Provider value={contextValue}>
+                {children}	
+            </Provider>
+        </div>
+    )
+}
+
+export default CustomProvider
