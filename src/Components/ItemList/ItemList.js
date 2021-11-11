@@ -1,8 +1,9 @@
 import Item from "../Item/Item"
+import "../../index.css"
 
 const ItemList = ({param}) => {
   return (
-    <>
+    <div className="grid-container">
         { param && param.length > 0  ? 
           param.map(item => {
             return <div key={item.id}>
@@ -10,7 +11,7 @@ const ItemList = ({param}) => {
             </div>
          })       
           : "Error reciving Item List parameters..."}
-    </>
+    </div>
   )
 }
 
