@@ -7,18 +7,19 @@ const CartWidget = () => {
 
     const cart = useContext(contexto);
 
-  
+         
     return (
         <>
-            <Link to="/checkout">
-                <div className="navbar__optionBasket">
-                    <span className="nav-cart-icon"></span>
-                    <ShoppingBasketIcon />
-                    <span className="navbar__optionLineTwo navbar__basketCount">
-                        {cart.totalUnits()}
-                    </span>
-                </div>
-            </Link>
+            <Link to="/cart">
+                    <div className="navbar__optionBasket">
+                        <span className="nav-cart-icon"></span>
+                        <ShoppingBasketIcon />
+                        <span className="navbar__optionLineTwo navbar__basketCount">
+                        {cart.totalUnits() ? cart.totalUnits() : null } 
+                        </span>
+                    </div>
+                </Link>
+            
         </>
     )
 

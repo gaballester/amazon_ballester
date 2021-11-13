@@ -1,19 +1,22 @@
-import { createContext,useState } from "react"
+import { createContext, useState } from "react"
 
-export const contexto = createContext() 
+export const contexto = createContext()
 
 export const { Provider } = contexto
 
-const CustomProvider = ( {children}) => {
+const CustomProvider = ({ children }) => {
 
-    const [cart,setCart] = useState([])
+    const [cart, setCart] = useState([])
+
+    const taxRate = 0.21
 
     const isInCart = (id) => {
         return cart.find(item => item.id === id)
     }
 
-    const addToCart = (id, branch, title, pictureUrl, qty, price) => {
-    
+
+    const addToCart = (id, branch, description1, title, pictureUrl, qty, price) => {
+
         if (isInCart(id)) {
             setCart(cart.map(item => {
                 if (item.id === id) {
@@ -23,7 +26,7 @@ const CustomProvider = ( {children}) => {
             }))
         }
         else {
-            setCart([...cart, {id, branch, title, pictureUrl, qty, price}])
+            setCart([...cart, { id, branch, description1, title, pictureUrl, qty, price }])
         }
     }
 
@@ -37,28 +40,47 @@ const CustomProvider = ( {children}) => {
         setCart([])
     }
 
-    const totalUnits = () => {  
+    const totalUnits = () => {
         let totalUnitsQty = 0
         cart.forEach(element => {
-            totalUnitsQty += element.qty          
+            totalUnitsQty += element.qty
         }
         )
         return totalUnitsQty;
     }
 
+    const totalPrice = () => {
+        let totalPrice = 0
+        cart.forEach(element => {
+            totalPrice += element.qty * element.price
+        }
+        )
+        return totalPrice;
+    }
+
+    const totalTax = () => {    
+        return totalPrice() * taxRate
+    }
+
+    const totalOrder = () => {
+        return totalPrice() + totalTax()
+    }
 
     const contextValue = {
         cart,
         addToCart,
         removeFromCart,
         emtyCart,
-        totalUnits
+        totalUnits,
+        totalPrice,
+        taxRate,
+        totalTax,
+        totalOrder
     }
     return (
-
         <div>
             <Provider value={contextValue}>
-                {children}	
+                {children}
             </Provider>
         </div>
     )

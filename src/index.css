@@ -25,3 +25,7 @@ code {
   gap: 2em; /* espacio entre videos*/
   grid-auto-flow: dense; /*cuando quedan espacios en blanco porque un bloque lo lleva abajo normalmente acomoda el hueco*/
 }
+
+.small__img{
+  width: 20px;
+}

@@ -15,7 +15,7 @@ const ItemDetail = ({ item }) => {
     const {addToCart} = useContext(contexto);
     
     const stateUplistindFromCount = (qty) => {
-        addToCart(id, branch, title, pictureUrl, qty, price);
+        addToCart(id, branch, description1, title, pictureUrl, qty, price);
         push("/cart")
     }
 
