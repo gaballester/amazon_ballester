@@ -30,7 +30,8 @@ const ItemCount = ({onAdd}) => {
     <>
     <div className="counter" >
       <Button 
-        variant="contained"
+        variant="outlined"
+        color="error"
         size="small"
         disableElevation
         startIcon={<Remove />}
@@ -38,15 +39,16 @@ const ItemCount = ({onAdd}) => {
       </Button>
 
       <TextField 
+          style = {{width: 50}}
           label={count} 
           size="small"
           variant="outlined" 
           disabled
-          align="center"
-          />
+           />
 
       <Button
-        variant="contained"
+        variant="outlined"
+        color="primary"
         size="small"
         disableElevation
         startIcon={<Add />}
@@ -56,7 +58,8 @@ const ItemCount = ({onAdd}) => {
     </div>
     <div>
         <Button
-        variant="contained"
+        variant="outlined"
+        color="primary"
         size="small"
         disableElevation
         onClick={() => onAdd(count)}>
