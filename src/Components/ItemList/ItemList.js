@@ -2,6 +2,7 @@ import Item from "../Item/Item"
 import "../../index.css"
 
 const ItemList = ({param}) => {
+  //console.log('param en itemList',param)
   return (
     <div className="grid-container">
         { param && param.length > 0  ? 

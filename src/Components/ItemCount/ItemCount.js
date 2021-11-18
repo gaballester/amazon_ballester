@@ -31,7 +31,6 @@ const ItemCount = ({onAdd}) => {
     <div className="counter" >
       <Button 
         variant="outlined"
-        color="error"
         size="small"
         disableElevation
         startIcon={<Remove />}

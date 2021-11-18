@@ -5,21 +5,19 @@ import { Button } from "@material-ui/core"
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { contexto } from "../../Context/CartContext"
-
-// estilos cards
+// -------------------------------------------------------------------
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-// estos dos los usa el container
+// -------------------------------------------------------------------
 import Container from '@mui/material/Container'
-import CssBaseline from '@mui/material/CssBaseline'
 
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 800
+        maxWidth: 550
     },
     media: {
         height: "400px"
@@ -46,10 +44,10 @@ const ItemDetail = ({ item }) => {
 
     return (
         <>
-            <CssBaseline />
-            <Container maxWidth="lg">
+
+            <Container  >
                 <Card className={classes.root}>
-                    <CardMedia 
+                    <CardMedia
                         className={classes.media}
                         image={pictureUrl}
                         title={title}
@@ -61,19 +59,21 @@ const ItemDetail = ({ item }) => {
                         <Typography variant="body2" color="textSecondary" component="p">
                             {description1} - {description2} - {description3} - {description4} - {description5}
                         </Typography>
-                        <Typography gutterBottom variant="h5" component="div">
-                            u$s {price}
-                        </Typography>
-                        <div className="itemDetail__rating">
-                            {Array(starts)
-                                .fill()
-                                .map((_, i) => (
-                                    <p key={i}>🌟</p>
-                                ))}
+                        <div>
+                            <Typography gutterBottom variant="h5" component="div">
+                                u$s {price}
+                            </Typography>
+                            <   div className="itemDetail__rating">
+                                {Array(starts)
+                                    .fill()
+                                    .map((_, i) => (
+                                        <p key={i}>🌟</p>
+                                    ))}
+                            </div>
                         </div>
                         <div className="itemDetail__Count">
                             <ItemCount onAdd={stateUplistindFromCount} />
-                            {/* qty={1} stk={10} */}
+                            
                         </div>
                         <div className="itemDetail__button">
                             <Link to="/">
@@ -82,7 +82,7 @@ const ItemDetail = ({ item }) => {
                                     size="small"
                                     disableElevation
                                     onClick={() => { }}>
-                                    Add More Products
+                                    View All Products
                                 </Button>
                             </Link>
                             <Link to="/cart">
@@ -98,6 +98,9 @@ const ItemDetail = ({ item }) => {
                     </CardContent>
                 </Card>
             </Container>
+
+
+
         </>
     );
 

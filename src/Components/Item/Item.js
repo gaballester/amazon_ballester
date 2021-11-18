@@ -2,10 +2,9 @@ import "./Item.css"
 import { Link } from 'react-router-dom'
 
 const Item = ({ item }) => {
-
+    
     return (
-
-        <div className="item" id={item.id}>
+        <div className="item" id={item.id} key={item.id}>
 
             <h3>{item.title}</h3>
             <img src={item.pictureUrl} alt="" />

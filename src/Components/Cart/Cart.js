@@ -14,7 +14,6 @@ import DeleteIcon from '@mui/icons-material/Delete'
 // estos dos los usa el container
 import Container from '@mui/material/Container'
 import CssBaseline from '@mui/material/CssBaseline'
-// para uso de grupo de botones
 import ButtonGroup from '@mui/material/ButtonGroup'
 import Alert from '@mui/material/Alert';
 
@@ -82,17 +81,17 @@ const Cart = () => {
                   </TableCell>
                 </TableRow>
               ))}
-              <TableRow>
+              <TableRow key='subTotal'>
                 <TableCell rowSpan={3} />
                 <TableCell colSpan={3}>Subtotal</TableCell>
                 <TableCell align="right">{currencyFormat(resultado.totalPrice())}</TableCell>
               </TableRow>
-              <TableRow>
+              <TableRow key='tax'>
                 <TableCell colSpan={2}>Tax</TableCell>
                 <TableCell align="right">{`${(resultado.taxRate * 100).toFixed(0)} %`}</TableCell>
                 <TableCell align="right">{currencyFormat(resultado.totalTax())}</TableCell>
               </TableRow>
-              <TableRow>
+              <TableRow key='total'>
                 <TableCell colSpan={3}>Total</TableCell>
                 <TableCell align="right">{currencyFormat(resultado.totalOrder())}</TableCell>
               </TableRow>
