@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { contexto } from "../../Context/CartContext"
 import { Link } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 // componentes de table
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
@@ -15,12 +16,26 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import Container from '@mui/material/Container'
 import CssBaseline from '@mui/material/CssBaseline'
 import ButtonGroup from '@mui/material/ButtonGroup'
-import Alert from '@mui/material/Alert';
+import Alert from '@mui/material/Alert'
+// import Buyer from "../Buyer/Buyer"
+import { makeStyles } from '@mui/styles'
+import db from '../../firebase.config';
+
+const useStyles = makeStyles((theme) => ({
+  PageContent: {
+    margin: '5rem',
+    spacing: '2rem'
+ 
+  }}
+  ));
 
 
 const Cart = () => {
 
   const resultado = useContext(contexto)
+  const classes = useStyles()
+
+  const { push } = useHistory();
 
   const buttons = [
     <Link to="/">
@@ -32,14 +47,47 @@ const Cart = () => {
     buttons.push(<Button key="emptyCard"
       onClick={() => resultado.emtyCart()}
     >Empty Cart</Button>)
-    buttons.push(<Button key="checkout">Checkout</Button>)
+    buttons.push(<Button key="checkout"
+      onClick={() => checkout()}
+    >Checkout</Button>)
   }
 
   function currencyFormat(num) {
     return `${num.toFixed(2)}`;
   }
 
-  // https://mui.com/components/tables/
+  const checkout = () => {
+
+    const usuario = {
+      name: "Joe Smith",
+      email: "jSmith@gmail.com",
+      phone: "3334568938",
+    }
+
+    const Order = {
+      orderDate: new Date().toLocaleDateString(),
+      buyer: usuario,
+      items: resultado.cart,
+      tax: resultado.totalTax(),
+      total: resultado.totalOrder(),
+    }
+
+    console.log(Order)
+    const collection = db.collection('Orders')
+    const query = collection.add(Order)
+
+    query.then(function (docRef) {
+      console.log("Document written with ID: ", docRef.id);
+      resultado.emtyCart()
+      push(`/CartMessage/${docRef.id}`)
+    }).catch(function (error) {
+      console.error("Error adding document: ", error);
+      <div>
+      <Alert severity="warning">Error to create Order.</Alert>
+      </div>
+    });
+
+  }
 
   return (
     <>
@@ -80,6 +128,7 @@ const Cart = () => {
                     <Button onClick={() => { resultado.removeFromCart(item.id) }} color="error" startIcon={<DeleteIcon />}></Button>
                   </TableCell>
                 </TableRow>
+
               ))}
               <TableRow key='subTotal'>
                 <TableCell rowSpan={3} />
@@ -98,13 +147,14 @@ const Cart = () => {
             </TableBody>
           </Table>
         </TableContainer>
-        {resultado.totalUnits() ? null : <div>   
-        <Alert severity="warning">This is a warning alert — Your cart is empty, press the Add More Products button to access all the products and choose which ones you want to add to your cart</Alert>
-        </div>}  
+        {resultado.totalUnits() ? null : <div>
+          <Alert severity="warning">This is a warning alert — Your cart is empty, press the Add More Products button to access all the products and choose which ones you want to add to your cart</Alert>
+        </div>}
         <ButtonGroup color="secondary" aria-label="medium secondary button group">
           {buttons}
         </ButtonGroup>
       </Container>
+
     </>
   )
 }

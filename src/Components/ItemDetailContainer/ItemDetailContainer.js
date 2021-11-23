@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import db from '../../firebase.config';
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
-import Button from '@mui/material/Button'
-import { Link } from 'react-router-dom'
+
 
 
 const ItemDetailContainer = () => {

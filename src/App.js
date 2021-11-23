@@ -6,7 +6,8 @@ import NavBar from "./Components/NavBar/NavBar";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./Components/Cart/Cart";
-import CustomProvider from "../src/Context/CartContext";
+import CustomProvider from "../src/Context/CartContext"
+import CartMessage from "./Components/Cart/CartMessage"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/cart" component={Cart} />
             <Route path="/itemDetail/:id" component={ItemDetailContainer} />
             <Route path="/category/:categoryId" component={ItemListContainer} />
+            <Route path="/CartMessage/:orderId" component={CartMessage} />
 
           </Switch>
 

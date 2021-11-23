@@ -1,26 +1,26 @@
 import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
-import { Button } from "@material-ui/core"
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { contexto } from "../../Context/CartContext"
 // -------------------------------------------------------------------
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 // -------------------------------------------------------------------
 import Container from '@mui/material/Container'
+import { makeStyles } from '@mui/styles';
 
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 550
+        maxWidth: 450
     },
     media: {
-        height: "400px"
+        height: "350px"
     }
 });
 

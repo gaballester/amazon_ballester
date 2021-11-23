@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { TextField, Button } from "@material-ui/core"
-import { Add, Remove } from "@material-ui/icons"
+import {Button, TextField} from '@mui/material'
+import { Add, Remove } from '@mui/icons-material'
 import "./itemCount.css";
 
 

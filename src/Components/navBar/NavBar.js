@@ -1,5 +1,6 @@
 import "./navBar.css";
-import SearchIcon from "@material-ui/icons/Search";
+import SearchIcon from '@mui/icons-material/Search';
+
 import { Link } from "react-router-dom";
 
 import CartWidget from "../CartWidget/CartWidget";

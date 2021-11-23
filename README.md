@@ -43,7 +43,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 Install te new version of material-ui mui. The command line is:
 
-npm install @mui/material
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+npm install @mui/styles
+
 
 this site always use matrial-ui/core and material-ui/icons
 
