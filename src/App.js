@@ -9,6 +9,7 @@ import Cart from "./Components/Cart/Cart";
 import CustomProvider from "../src/Context/CartContext"
 import CartMessage from "./Components/Cart/CartMessage"
 
+
 function App() {
   return (
     <div className="app">
@@ -19,13 +20,11 @@ function App() {
           <NavBar />
 
           <Switch>
-
             <Route exact path="/" component={ItemListContainer}  />
             <Route path="/cart" component={Cart} />
             <Route path="/itemDetail/:id" component={ItemDetailContainer} />
             <Route path="/category/:categoryId" component={ItemListContainer} />
             <Route path="/CartMessage/:orderId" component={CartMessage} />
-
           </Switch>
 
         </CustomProvider>

@@ -47,6 +47,9 @@ npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 npm install @mui/styles
 
+npm install react-hook-form
+
+npm i --save react-select
 
 this site always use matrial-ui/core and material-ui/icons
 
