@@ -8,19 +8,7 @@ const OrderMsgOk = (param) => {
 
     const { orderId } = useParams()
 
-    const useStyles = makeStyles(theme => ({
-        margin: {
-            margin: 2,
-        },
-        papper: {
-            padding: "20px",
-            width: "90%",
-
-        },
-
-    }));
-
-
+    
     return (
         <>
             {

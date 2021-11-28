@@ -1,6 +1,5 @@
-import { SpaceBar } from '@mui/icons-material';
 import { FormHelperText, Input, InputLabel } from '@mui/material';
-import { FormControl, Button, Grid, Paper, Box } from '@mui/material'
+import { FormControl, Button, Grid, Paper } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import { useForm } from 'react-hook-form'
 
@@ -10,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     },
     papper: {
         padding: "20px",
-        width: "100%",
+        width: "97%",
         height: "30vh"
     },
     form: {
@@ -23,7 +22,7 @@ const Buyer = ({onAddBuyer}) => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const { margin, papper } = useStyles();
+    const {papper } = useStyles();
 
     const onSubmit = (buyerData, e) => {
         onAddBuyer(buyerData)

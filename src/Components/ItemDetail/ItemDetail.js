@@ -11,16 +11,22 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 // -------------------------------------------------------------------
-import Container from '@mui/material/Container'
+import { Grid,Stack } from '@mui/material'
 import { makeStyles } from '@mui/styles';
+
 
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 450
+        maxWidth: "25%",
+        margin: "0 auto",
+        marginTop: "2rem",
+        marginBottom: "2rem",
+        textAlign: "center",
+
     },
     media: {
-        height: "350px"
+        height: "25%"
     }
 });
 
@@ -43,69 +49,67 @@ const ItemDetail = ({ item }) => {
 
 
     return (
-        <>
+        <Grid
+            container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justify="center"
+            style={{ minHeight: "100vh" }}
+        >
+            <Card className={classes.root}>
+                <CardMedia
+                    className={classes.media}
+                    image={pictureUrl}
+                    title={title}
+                    component="img"
+                    height="194"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {branch} - {title}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        {description1} - {description2} - {description3} - {description4} - {description5}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="div">
+                        u$s {price}
+                    </Typography>
+                    <Grid className="itemDetail__rating">
+                        {Array(starts)
+                            .fill()
+                            .map((_, i) => (
+                                <p key={i}>🌟</p>
+                            ))}
+                    </Grid>
 
-            <Container  >
-                <Card className={classes.root}>
-                    <CardMedia
-                        className={classes.media}
-                        image={pictureUrl}
-                        title={title}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            {branch} - {title}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {description1} - {description2} - {description3} - {description4} - {description5}
-                        </Typography>
-                        <div>
-                            <Typography gutterBottom variant="h5" component="div">
-                                u$s {price}
-                            </Typography>
-                            <   div className="itemDetail__rating">
-                                {Array(starts)
-                                    .fill()
-                                    .map((_, i) => (
-                                        <p key={i}>🌟</p>
-                                    ))}
-                            </div>
-                        </div>
-                        <div className="itemDetail__Count">
-                            <ItemCount onAdd={stateUplistindFromCount} />
-                            
-                        </div>
-                        <div className="itemDetail__button">
-                            <Link to="/">
-                                <Button
-                                    variant="outlined"
-                                    size="small"
-                                    disableElevation
-                                    onClick={() => { }}>
-                                    View All Products
-                                </Button>
-                            </Link>
-                            <Link to="/cart">
-                                <Button
-                                    variant="outlined"
-                                    size="small"
-                                    disableElevation
-                                    onClick={() => { }}>
-                                    Go to Cart
-                                </Button>
-                            </Link>
-                        </div>
-                    </CardContent>
-                </Card>
-            </Container>
+                    <div className="itemDetail__Count">
+                        <ItemCount onAdd={stateUplistindFromCount} />
 
-
-
-        </>
+                    </div>
+                    
+                    <Stack direction="row" spacing={1}>          
+                        <Link to="/">
+                            <Button
+                                variant="contained"
+                                disableElevation
+                                onClick={() => { }}>
+                                View All Products
+                            </Button>
+                        </Link>
+                        <Link to="/cart">
+                            <Button 
+                                variant="contained"
+                                disableElevation
+                                onClick={() => { }}>
+                                Go to Cart
+                            </Button>
+                        </Link>
+                    </Stack>
+                </CardContent>
+            </Card>
+        </Grid>
     );
-
-
-
 
 }
 

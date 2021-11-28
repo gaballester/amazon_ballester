@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import {Button, TextField} from '@mui/material'
+import { Button, TextField, Grid } from '@mui/material'
 import { Add, Remove } from '@mui/icons-material'
 import "./itemCount.css";
 
 
-const ItemCount = ({onAdd}) => {
+const ItemCount = ({ onAdd }) => {
 
 
   // Set the initial count state to Cart quantity
@@ -14,7 +14,7 @@ const ItemCount = ({onAdd}) => {
   // Create handleIncrement event handler only exist stock
   const increment = () => {
     // if (count < param.stk) {
-      setCount(count + 1)
+    setCount(count + 1)
     //}
   }
 
@@ -27,45 +27,51 @@ const ItemCount = ({onAdd}) => {
 
   return (
 
-    <>
-    <div className="counter" >
-      <Button 
-        variant="outlined"
-        size="small"
-        disableElevation
-        startIcon={<Remove />}
-        onClick={decrement}>
-      </Button>
-
-      <TextField 
-          style = {{width: 50}}
-          label={count} 
-          size="small"
-          variant="outlined" 
-          disabled
-           />
-
-      <Button
-        variant="outlined"
-        color="primary"
-        size="small"
-        disableElevation
-        startIcon={<Add />}
-        onClick={increment}>
-      </Button>
-
-    </div>
-    <div>
+    <Grid
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justify="center"
+      style={{ minHeight: "10vh" }}
+    >
+      <Grid spacing={4}>
         <Button
-        variant="outlined"
-        color="primary"
-        size="small"
-        disableElevation
-        onClick={() => onAdd(count)}>
+          variant="outlined"
+          disableElevation
+          size="large"
+          startIcon={<Remove />}
+          onClick={decrement}>
+        </Button>
+
+        <TextField
+          style={{ width: 50 }}
+          label={count}
+          variant="outlined"
+          size="small"
+          disabled
+        />
+
+        <Button
+          variant="outlined"
+          color="primary"
+          disableElevation
+          size="large"
+          startIcon={<Add />}
+          onClick={increment}>
+        </Button>
+
+      </Grid>
+      <Grid >
+        <Button
+          variant="contained"
+          color="success"
+          disableElevation
+          onClick={() => onAdd(count)}>
           Add to Cart
-      </Button>
-    </div>
-    </>
+        </Button>
+      </Grid>
+    </Grid>
 
   )
 }
