@@ -5,11 +5,41 @@ Luego el proyeacto fue tomando su propio estilo a través de material UI
 
 Dentro de las funcionalidades tenemos:
 
-Página principal donde se visualizantodos los productos, con la posibilidad de fltrar los mismo por categorías. Pudiendo ver solo monitores, solo computadoras, o todos los productos.
+Página principal donde se visualizantodos los productos, con una breve descripciòn de cada uno en su card y contamos con la posibilidad de fltrar los mismo por categorías. Pudiendo visualizar todos los productos, solo monitores o solo computadoras.
 
 ![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/home_all.jpg)
 ![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/home_computers.jpg)
 ![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/home_monitors.jpg)
+
+Seleccionado un producto podemos ver el detalle del mismo
+
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/itemDetail.jpg)
+
+Donde podemos:
+
+- Ver el detalle del mismo
+- Indicar la cantidad de unidades 
+- Ir directamente al Carrito para consultarlo sin agregar el producto
+agregar al carrito, con lo cual agrega el producto en el carrito y nos lleva al carrito para ver la composiciòn actualizada del mismo, y actualiza el contador en el CartWidget del navbar
+- O volver al home
+
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/Cart01.jpg)
+
+Si le indicamos proceder con la compra presionando el botón de CHECKOUT, nos aparece un formulario para cargar los datos del comprador y dirección de entrega
+
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/cart2.jpg)
+
+Después de completar los datos del comprador se presiona el botón de BUYER y se genera la orden de compra en Firebase, mostrando el siguiente mensaje por pantalla
+
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/ordenCompra.jpg)
+
+Y en Firebase tendremos la misma creada
+
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/firebase.jpg)
+
+Caso de fallar la creación de la Orden de Compra en Firebase, aparecerá un mensaje de error.
+
+Esto es a grandes rasgos la navegabilidad el portal de ecommerce, voy a adjuntar a esta documentación un video donde se muestra la navegabilidad completa.
 
 
 # Getting Started with Create React App
