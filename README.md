@@ -51,6 +51,24 @@ Esto es a grandes rasgos la navegabilidad el portal de ecommerce, voy a adjuntar
 
 ![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/Diagrama.jpg)
 
+De acuerdo a lo aprendido en el curso, cada componente tiene su propia funcionalidad y no existe superposición entre las competencias y responsabilidades de cada uno.
+
+Por ejemplo, 
+
+- ItemListContainer se encarga de toda la lógica para obtener y administrar los datos.
+- ItemList se encarga de iterar los datos obtenido por el componente previo
+- Item se encarga de mostrar visualmente el dato de un elemento en particular
+
+El CartWidget es un componente que forma parte del navbar, pero su competencia es exclusivamente mostar la cantidad de elementos agregados al carrito y la posibilidad de acceder al mismo.
+
+CustomProvider es donde tenemos definados elementos y funciones del entorno que se comparten entre varios componentes, independientemente de su ubicación y nivel en el árbol de rutas.
+
+ItemCount es un componente que se encarga exclusivamente del selector de cantidades de productos que está incluido dentro de 
+
+ItemDetail, que es el componente que muestra la información detallada de un producto.
+
+Y así para cada componente que forma parte del modelo. La idea es modularizar en componentes que tengan determinada función específica, de manera tal, de permitir su reutilización dentro de la app y su utilización por otros componentes de manera transparente y unívoca.
+
 # Video con navegación detallada
 link [Video con Navegación Completa](https://drive.google.com/drive/folders/1R9ihk6yP4MX6vCdmOXbuL_rWyYP4ytCo).
 
