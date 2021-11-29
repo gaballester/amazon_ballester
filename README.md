@@ -20,7 +20,7 @@ Donde podemos:
 - Ver el detalle del mismo
 - Indicar la cantidad de unidades 
 - Ir directamente al Carrito para consultarlo sin agregar el producto
-agregar al carrito, con lo cual agrega el producto en el carrito y nos lleva al carrito para ver la composiciòn actualizada del mismo, y actualiza el contador en el CartWidget del navbar
+- agregar al carrito, con lo cual agrega el producto en el carrito y nos lleva al carrito para ver la composiciòn actualizada del mismo, y actualiza el contador en el CartWidget del navbar
 - O volver al home
 
 ![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/Cart01.jpg)
@@ -42,84 +42,59 @@ Caso de fallar la creación de la Orden de Compra en Firebase, aparecerá un men
 Esto es a grandes rasgos la navegabilidad el portal de ecommerce, voy a adjuntar a esta documentación un video donde se muestra la navegabilidad completa.
 
 
-# Getting Started with Create React App
+# Este proyecto se creó usando Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+link [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+## Como armar entorno para usar los fuentes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Para instalar Node.js hay que descargarse el instalador desde pagina oficial  https://nodejs.org/es/
+### Instalar react y crear app
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm install -g create-react-app
+create-react-app my-app
 
+## Instalación de Frameworks adicionales
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Aditional install Frameworks 
-
-Install te new version of material-ui mui. The command line is:
+### Instalar material-ui mui. 
 
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 npm install @mui/styles
 
+### Instalar react-hook-form para el formulario y validaciones
+
 npm install react-hook-form
 
-npm i --save react-select
+### Instalar firebase
 
-this site always use matrial-ui/core and material-ui/icons
+npm install firebase@8.9.1 --save
+(consultar en firebase como configurar la conexion a sus propios datos, deberá modificar la configuración en el archivo firebase.config.js para usar su propia base)
+
+### Instalar react-router-dom para manejo de rutas
+
+npm install  react-router-dom
 
 
-## Learn More
+## Correr la app 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+para levantar  el entorno de desarrollo se debe ejecutar el comando 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    npm start
 
-### Code Splitting
+que corre la app en modedesarrollo en la siguiente url 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+http://localhost:3000
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Generar un Build de la app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Para generar un build de la app se debe correr el siguiente comando:
 
-### Advanced Configuration
+`npm run build`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
