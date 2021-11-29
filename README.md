@@ -3,7 +3,7 @@
 La idea era armar una tienda on-line similar a Amazon al inicio del proyecto, como puede apreciarse en el menú de navegación.
 Luego el proyecto fue mutando y tomando su propio estilo a medida que me interiorizaba de las posibilidades con material UI y que los tiempos del curso no daban para un proyecto de tal embergadura.
 
-Dentro de las funcionalidades tenemos del excommerce desarrollado, tenemos:
+Dentro de las funcionalidades tenemos del ecommerce desarrollado, tenemos:
 
 Página principal donde se visualizantodos los productos, con una breve descripciòn de cada uno en su card. Contamos con la posibilidad de fltrar los mismo por categorías, pudiendo visualizar todos los productos, solo computadoras o solo monitores, tal cual pueden apreciarse, respectivamente, en las siguientes imágenes.
 
@@ -51,6 +51,9 @@ Esto es a grandes rasgos la navegabilidad el portal de ecommerce, voy a adjuntar
 
 ![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/Diagrama.jpg)
 
+# Video con navegación detallada
+
+![alt text](https://drive.google.com/drive/folders/1R9ihk6yP4MX6vCdmOXbuL_rWyYP4ytCo)
 
 # Este proyecto se creó usando Create React App
 link [Create React App](https://github.com/facebook/create-react-app).
@@ -102,10 +105,10 @@ MIT
 
 **Free Software!**
 
-
-|------------|-----------------------------------------|
-|Curso      | React JS                                |
-|Camada      | 16975                                   |
+| | |
+|----|----------|
+|Curso | React JS 
+|Camada | 16975 |
 |Profesor|Horacio Gutierres Esteves|
 |Alumno |Guillermo A Ballester
 
