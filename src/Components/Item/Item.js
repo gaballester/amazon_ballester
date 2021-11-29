@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Grid, Stack } from '@mui/material'
+import { Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles';
 
 
@@ -33,7 +33,7 @@ const Item = ({ item }) => {
         <Grid
             container
             direction="column"
-            alignItems="center"
+            alignItems="stretch"
             justify="center"
             style={{ minHeight: "57vh" }}
         >
@@ -72,11 +72,12 @@ const Item = ({ item }) => {
                         direction="column"
                         alignItems="center"
                         justify="center"
-                        style={{ minHeight: "57vh" }}
+                        style={{ minHeight: "100px"}}                        
                     >
                         <Link to={`/itemDetail/${item.id}`}>View Details</Link>
 
                     </Grid>
+
                </CardContent>
             </Card>
         </Grid >

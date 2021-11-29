@@ -20,11 +20,10 @@ const useStyles = makeStyles({
         margin: "0 auto",
         marginTop: "2rem",
         marginBottom: "2rem",
-        textAlign: "center",
-
+        textAlign: "center"
     },
     media: {
-        height: "20%"
+        height: "25%"
     }
 });
 
