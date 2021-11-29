@@ -1,6 +1,14 @@
 # TIENDA ONLINE SIMILAR A AMAZON
 
-La idea es armar una tienda on-line similar a Amazon 
+La idea es armar una tienda on-line similar a Amazon al inicio del proyecto, como puede apreciarse en el menú de navegación.
+Luego el proyeacto fue tomando su propio estilo a través de material UI
+
+Dentro de las funcionalidades tenemos:
+
+Página principal donde se visualizantodos los productos, con la posibilidad de fltrar los mismo por categorías. Pudiendo ver solo monitores, solo computadoras, o todos los productos.
+
+![alt text](https://github.com/gaballester/amazon_ballester/doc/imgs/home_all.jpg?raw=true)
+
 
 # Getting Started with Create React App
 

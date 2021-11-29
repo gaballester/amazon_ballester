@@ -7,18 +7,11 @@ import "./itemCount.css";
 const ItemCount = ({ onAdd }) => {
 
 
-  // Set the initial count state to Cart quantity
   const [count, setCount] = useState(1)
-
-
-  // Create handleIncrement event handler only exist stock
   const increment = () => {
-    // if (count < param.stk) {
     setCount(count + 1)
-    //}
   }
 
-  //Create handleDecrement event handler
   const decrement = () => {
     if (count > 0) {
       setCount(count - 1)
@@ -30,12 +23,12 @@ const ItemCount = ({ onAdd }) => {
     <Grid
       container
       spacing={0}
-      direction="column"
+      direction="row"
       alignItems="center"
-      justify="center"
+      justify-content="center"
       style={{ minHeight: "10vh" }}
     >
-      <Grid spacing={4}>
+      <div className="counter__item">
         <Button
           variant="outlined"
           disableElevation
@@ -61,8 +54,8 @@ const ItemCount = ({ onAdd }) => {
           onClick={increment}>
         </Button>
 
-      </Grid>
-      <Grid >
+      </div >
+      <div className="counter__item">
         <Button
           variant="contained"
           color="success"
@@ -70,7 +63,8 @@ const ItemCount = ({ onAdd }) => {
           onClick={() => onAdd(count)}>
           Add to Cart
         </Button>
-      </Grid>
+      </div>
+
     </Grid>
 
   )

@@ -26,7 +26,6 @@ const Buyer = ({onAddBuyer}) => {
 
     const onSubmit = (buyerData, e) => {
         onAddBuyer(buyerData)
-        console.log('submit', buyerData)
         e.target.reset()
     }
 

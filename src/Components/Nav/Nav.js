@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <nav className="left_navlinks">
             <NavLink to="/">All Products</NavLink>
-            ''
+            '||'
             <NavLink to="/category/Computers">Computers</NavLink>
             '||'
             <NavLink to="/category/Monitors">Monitors</NavLink>

@@ -11,10 +11,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 // -------------------------------------------------------------------
-import { Grid,Stack } from '@mui/material'
+import { Grid, Stack } from '@mui/material'
 import { makeStyles } from '@mui/styles';
-
-
 
 const useStyles = makeStyles({
     root: {
@@ -26,7 +24,7 @@ const useStyles = makeStyles({
 
     },
     media: {
-        height: "25%"
+        height: "20%"
     }
 });
 
@@ -45,9 +43,6 @@ const ItemDetail = ({ item }) => {
         push("/cart")
     }
 
-
-
-
     return (
         <Grid
             container
@@ -58,6 +53,14 @@ const ItemDetail = ({ item }) => {
             style={{ minHeight: "100vh" }}
         >
             <Card className={classes.root}>
+
+                <Typography gutterBottom variant="h5" component="h2">
+                    <h4> {branch.toUpperCase()} </h4>
+                </Typography>
+                <Typography gutterBottom variant="h5" component="h2">
+                    {title}
+                </Typography>
+
                 <CardMedia
                     className={classes.media}
                     image={pictureUrl}
@@ -66,29 +69,23 @@ const ItemDetail = ({ item }) => {
                     height="194"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {branch} - {title}
-                    </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {description1} - {description2} - {description3} - {description4} - {description5}
                     </Typography>
                     <Typography gutterBottom variant="h5" component="div">
                         u$s {price}
                     </Typography>
-                    <Grid className="itemDetail__rating">
+                    <div className="itemDetail__rating">
                         {Array(starts)
                             .fill()
                             .map((_, i) => (
                                 <p key={i}>🌟</p>
                             ))}
-                    </Grid>
-
-                    <div className="itemDetail__Count">
-                        <ItemCount onAdd={stateUplistindFromCount} />
-
                     </div>
-                    
-                    <Stack direction="row" spacing={1}>          
+                    <Grid item xs={12}>
+                        <ItemCount onAdd={stateUplistindFromCount} />
+                    </Grid>
+                    <Stack direction="row" spacing={1} alignItems="center" justifyContent="center">
                         <Link to="/">
                             <Button
                                 variant="contained"
@@ -98,7 +95,7 @@ const ItemDetail = ({ item }) => {
                             </Button>
                         </Link>
                         <Link to="/cart">
-                            <Button 
+                            <Button
                                 variant="contained"
                                 disableElevation
                                 onClick={() => { }}>
@@ -106,6 +103,7 @@ const ItemDetail = ({ item }) => {
                             </Button>
                         </Link>
                     </Stack>
+
                 </CardContent>
             </Card>
         </Grid>

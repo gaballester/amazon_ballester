@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { contexto } from "../../Context/CartContext"
 import { Link } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
-// componentes de table
+
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -10,7 +10,7 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import { Paper, Box, Button, Grid } from '@mui/material'
-// import Button from '@mui/material/Button'
+
 import DeleteIcon from '@mui/icons-material/Delete'
 
 import Container from '@mui/material/Container'
@@ -21,15 +21,7 @@ import Buyer from "../../Components/Buyer/Buyer"
 
 const Cart = () => {
 
-  // const buyer = {
-  //   name: "",
-  //   email: "",
-  //   address: "",
-  //   phone: ""
-  // }
-
   const resultado = useContext(contexto)
- 
   const { push } = useHistory();
   const [viewBuyer, setViewBuyer] = useState(false)
 
@@ -109,7 +101,7 @@ const Cart = () => {
               <TableCell align="right">Quantity</TableCell>
               <TableCell align="right">Unit price</TableCell>
               <TableCell align="right">Total</TableCell>
-              <TableCell>Eliminar</TableCell>
+              <TableCell>Delete</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -137,7 +129,7 @@ const Cart = () => {
               <TableCell align="right">{currencyFormat(resultado.totalTax())}</TableCell>
             </TableRow>
             <TableRow key='total'>
-              <TableCell colSpan={2}>Total</TableCell>
+              <TableCell colSpan={3}>Total</TableCell>
               <TableCell align="right">{currencyFormat(resultado.totalOrder())}</TableCell>
             </TableRow>
           </TableBody>
