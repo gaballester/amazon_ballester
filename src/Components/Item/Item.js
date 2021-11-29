@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     root: {
         maxWidth: "40vh",
         minHeight: "40vh",
-        maxHeight: "55vh",
+        maxHeight: "60vh",
         margin: "0 auto",
         marginTop: "2rem",
         marginBottom: "2rem",
