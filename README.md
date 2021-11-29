@@ -7,7 +7,9 @@ Dentro de las funcionalidades tenemos:
 
 Página principal donde se visualizantodos los productos, con la posibilidad de fltrar los mismo por categorías. Pudiendo ver solo monitores, solo computadoras, o todos los productos.
 
-![alt text](https://github.com/gaballester/amazon_ballester/doc/img/home_all.jpg?raw=true)
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/home_all.jpg)
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/home_computers.jpg)
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/home_monitors.jpg)
 
 
 # Getting Started with Create React App
