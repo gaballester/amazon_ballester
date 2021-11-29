@@ -52,8 +52,7 @@ Esto es a grandes rasgos la navegabilidad el portal de ecommerce, voy a adjuntar
 ![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/Diagrama.jpg)
 
 # Video con navegación detallada
-
-![alt text](https://drive.google.com/drive/folders/1R9ihk6yP4MX6vCdmOXbuL_rWyYP4ytCo)
+link [Video con Navegación Completa](https://drive.google.com/drive/folders/1R9ihk6yP4MX6vCdmOXbuL_rWyYP4ytCo).
 
 # Este proyecto se creó usando Create React App
 link [Create React App](https://github.com/facebook/create-react-app).
