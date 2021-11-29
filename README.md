@@ -44,9 +44,13 @@ Caso de fallar la creación de la Orden de Compra en Firebase, aparecerá un men
 En caso de presionar el botón de vaciar el carrito o ir ala carrito sin tener ningún producto seleccionado, aparecerá un menaje de warning, tal como puede pareciarse en la siguiente imagen
 
 ![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/emptyCart.jpg)
-emptyCart.jpg
 
 Esto es a grandes rasgos la navegabilidad el portal de ecommerce, voy a adjuntar a esta documentación un video donde se muestra la navegabilidad completa.
+
+# Diagrama de relaciones entre Componentes
+
+![alt text](https://github.com/gaballester/amazon_ballester/blob/main/doc/img/Diagrama.jpg)
+
 
 # Este proyecto se creó usando Create React App
 link [Create React App](https://github.com/facebook/create-react-app).
@@ -98,7 +102,7 @@ MIT
 
 **Free Software!**
 
-|            |                                         |
+
 |------------|-----------------------------------------|
 |Curso      | React JS                                |
 |Camada      | 16975                                   |
