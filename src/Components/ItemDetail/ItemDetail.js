@@ -20,7 +20,7 @@ const useStyles = makeStyles({
         margin: "0 auto",
         marginTop: "2rem",
         marginBottom: "2rem",
-        textAlign: "center"
+        textAlign: "center",
     },
     media: {
         height: "25%"
@@ -29,6 +29,12 @@ const useStyles = makeStyles({
 
 
 const ItemDetail = ({ item }) => {
+
+    const styles = {
+        fullHeightCard: {
+            height: "100%",
+        },
+    }
 
     const classes = useStyles();
 
@@ -49,9 +55,9 @@ const ItemDetail = ({ item }) => {
             direction="column"
             alignItems="center"
             justify="center"
-            style={{ minHeight: "100vh" }}
+           
         >
-            <Card className={classes.root}>
+            <Card className={classes.root} >
 
                 <Typography gutterBottom variant="h5" component="h2">
                     <h4> {branch.toUpperCase()} </h4>
@@ -67,7 +73,7 @@ const ItemDetail = ({ item }) => {
                     component="img"
                     height="194"
                 />
-                <CardContent>
+                <CardContent  style={{ height: "500px" }}>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {description1} - {description2} - {description3} - {description4} - {description5}
                     </Typography>
