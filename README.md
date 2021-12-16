@@ -1,5 +1,5 @@
 # TIENDA ONLINE SIMILAR A AMAZON 
-## 5. Profile View Counter
+
 ![Profile View Counter](https://komarev.com/ghpvc/?username=gaballester)
 
 La idea era armar una tienda on-line similar a Amazon al inicio del proyecto, como puede apreciarse en el menú de navegación.
