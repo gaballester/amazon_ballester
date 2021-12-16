@@ -152,5 +152,4 @@ MIT
 |Profesor|Horacio Gutierres Esteves|
 |Alumno |Guillermo A Ballester
 
-![Your Repository's Stats](https://github-readme-stats.gaballester/amazon_ballester.app/api/top-langs/?username=gaballester&theme=blue-green)
 
