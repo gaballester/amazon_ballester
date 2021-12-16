@@ -1,6 +1,7 @@
 # TIENDA ONLINE SIMILAR A AMAZON 
 
 ![Profile View Counter](https://komarev.com/ghpvc/?username=gaballester)
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Tanu-N-Prabhu&theme=blue-green)
 
 La idea era armar una tienda on-line similar a Amazon al inicio del proyecto, como puede apreciarse en el menú de navegación.
 Luego el proyecto fue mutando y tomando su propio estilo a medida que me interiorizaba de las posibilidades con material UI y que los tiempos del curso no daban para un proyecto de tal embergadura.
